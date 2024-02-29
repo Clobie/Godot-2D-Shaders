@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://bibvko5ludqlk"]
+[gd_scene load_steps=22 format=3 uid="uid://bibvko5ludqlk"]
 
 [ext_resource type="Texture2D" uid="uid://csmhpr4ky4p2v" path="res://assets/icon.svg" id="1_qhfb6"]
 [ext_resource type="Shader" path="res://shaders/greyscale.gdshader" id="2_nvcqh"]
@@ -6,6 +6,7 @@
 [ext_resource type="Shader" path="res://shaders/distortion1.gdshader" id="4_dpq3w"]
 [ext_resource type="Shader" path="res://shaders/fire1.gdshader" id="5_yi7yo"]
 [ext_resource type="Shader" path="res://shaders/lightning.gdshader" id="6_qsnl6"]
+[ext_resource type="Shader" path="res://shaders/pixel_dissolve.gdshader" id="7_nyvn0"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_33jc5"]
 shader = ExtResource("2_nvcqh")
@@ -27,13 +28,15 @@ shader_parameter/size = 0.08
 shader_parameter/noise = SubResource("NoiseTexture2D_7pomo")
 
 [sub_resource type="Gradient" id="Gradient_n285s"]
-offsets = PackedFloat32Array(0, 0.131148, 0.191257, 0.535519)
+offsets = PackedFloat32Array(0, 0.131148, 0.262295, 0.896175)
 colors = PackedColorArray(0, 0, 0, 0, 1, 0, 0, 1, 1, 0.611765, 0, 1, 1, 1, 1, 1)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_3bhmp"]
 gradient = SubResource("Gradient_n285s")
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_hs8v2"]
+seed = 1
+frequency = 0.0022
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_0bxwo"]
 seamless = true
@@ -41,6 +44,8 @@ seamless_blend_skirt = 1.0
 noise = SubResource("FastNoiseLite_hs8v2")
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_yegjj"]
+seed = 4
+frequency = 0.0007
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_2o2yi"]
 seamless = true
@@ -71,6 +76,10 @@ shader_parameter/alpha = 1.0
 shader_parameter/seed = 1.0
 shader_parameter/uv_alpha_distance_mask = 1.0
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_v5m2i"]
+shader = ExtResource("7_nyvn0")
+shader_parameter/progress = 0.5
+
 [node name="Main" type="Node2D"]
 
 [node name="Icon" type="Sprite2D" parent="."]
@@ -94,10 +103,15 @@ texture = ExtResource("1_qhfb6")
 
 [node name="Icon5" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_4kil0")
-position = Vector2(590, 70)
+position = Vector2(720, 70)
 texture = ExtResource("1_qhfb6")
 
 [node name="Icon6" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_ir641")
-position = Vector2(720, 70)
+position = Vector2(850, 70)
+texture = ExtResource("1_qhfb6")
+
+[node name="Icon7" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_v5m2i")
+position = Vector2(590, 70)
 texture = ExtResource("1_qhfb6")
