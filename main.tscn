@@ -1,3 +1,103 @@
-[gd_scene format=3 uid="uid://bibvko5ludqlk"]
+[gd_scene load_steps=20 format=3 uid="uid://bibvko5ludqlk"]
+
+[ext_resource type="Texture2D" uid="uid://csmhpr4ky4p2v" path="res://assets/icon.svg" id="1_qhfb6"]
+[ext_resource type="Shader" path="res://shaders/greyscale.gdshader" id="2_nvcqh"]
+[ext_resource type="Shader" path="res://shaders/chroma_offset.gdshader" id="3_1bvkn"]
+[ext_resource type="Shader" path="res://shaders/distortion1.gdshader" id="4_dpq3w"]
+[ext_resource type="Shader" path="res://shaders/fire1.gdshader" id="5_yi7yo"]
+[ext_resource type="Shader" path="res://shaders/lightning.gdshader" id="6_qsnl6"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_33jc5"]
+shader = ExtResource("2_nvcqh")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hhkfr"]
+shader = ExtResource("3_1bvkn")
+shader_parameter/offset = 10.0
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_lh2x0"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_7pomo"]
+seamless_blend_skirt = 1.0
+noise = SubResource("FastNoiseLite_lh2x0")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5363j"]
+shader = ExtResource("4_dpq3w")
+shader_parameter/speed = 0.3
+shader_parameter/size = 0.08
+shader_parameter/noise = SubResource("NoiseTexture2D_7pomo")
+
+[sub_resource type="Gradient" id="Gradient_n285s"]
+offsets = PackedFloat32Array(0, 0.131148, 0.191257, 0.535519)
+colors = PackedColorArray(0, 0, 0, 0, 1, 0, 0, 1, 1, 0.611765, 0, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_3bhmp"]
+gradient = SubResource("Gradient_n285s")
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_hs8v2"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_0bxwo"]
+seamless = true
+seamless_blend_skirt = 1.0
+noise = SubResource("FastNoiseLite_hs8v2")
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_yegjj"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_2o2yi"]
+seamless = true
+seamless_blend_skirt = 1.0
+noise = SubResource("FastNoiseLite_yegjj")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4kil0"]
+shader = ExtResource("5_yi7yo")
+shader_parameter/texture1_scroll = Vector2(0.1, 0.34)
+shader_parameter/texture2_scroll = Vector2(0.02, 0)
+shader_parameter/noise_texture1 = SubResource("NoiseTexture2D_0bxwo")
+shader_parameter/noise_texture2 = SubResource("NoiseTexture2D_2o2yi")
+shader_parameter/color_texture = SubResource("GradientTexture1D_3bhmp")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ir641"]
+shader = ExtResource("6_qsnl6")
+shader_parameter/effect_color = Color(0.2, 0.3, 0.8, 1)
+shader_parameter/octave_count = 5
+shader_parameter/amp_start = 0.131
+shader_parameter/amp_coeff = 0.54
+shader_parameter/freq_coeff = 3.4
+shader_parameter/speed = 1.005
+shader_parameter/alpha_threshold = 2.171
+shader_parameter/width = 2.773
+shader_parameter/offset = 0.275
+shader_parameter/speed_modif = 1.0
+shader_parameter/alpha = 1.0
+shader_parameter/seed = 1.0
+shader_parameter/uv_alpha_distance_mask = 1.0
 
 [node name="Main" type="Node2D"]
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(70, 70)
+texture = ExtResource("1_qhfb6")
+
+[node name="Icon2" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_33jc5")
+position = Vector2(200, 70)
+texture = ExtResource("1_qhfb6")
+
+[node name="Icon3" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_hhkfr")
+position = Vector2(330, 70)
+texture = ExtResource("1_qhfb6")
+
+[node name="Icon4" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_5363j")
+position = Vector2(460, 70)
+texture = ExtResource("1_qhfb6")
+
+[node name="Icon5" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_4kil0")
+position = Vector2(590, 70)
+texture = ExtResource("1_qhfb6")
+
+[node name="Icon6" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_ir641")
+position = Vector2(720, 70)
+texture = ExtResource("1_qhfb6")
