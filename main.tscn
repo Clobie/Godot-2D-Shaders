@@ -103,12 +103,12 @@ texture = ExtResource("1_qhfb6")
 
 [node name="Icon5" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_4kil0")
-position = Vector2(720, 70)
+position = Vector2(70, 200)
 texture = ExtResource("1_qhfb6")
 
 [node name="Icon6" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_ir641")
-position = Vector2(850, 70)
+position = Vector2(200, 200)
 texture = ExtResource("1_qhfb6")
 
 [node name="Icon7" type="Sprite2D" parent="."]
