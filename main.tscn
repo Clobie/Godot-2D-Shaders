@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://bibvko5ludqlk"]
+[gd_scene load_steps=26 format=3 uid="uid://bibvko5ludqlk"]
 
 [ext_resource type="Texture2D" uid="uid://csmhpr4ky4p2v" path="res://assets/icon.svg" id="1_qhfb6"]
 [ext_resource type="Shader" path="res://shaders/greyscale.gdshader" id="2_nvcqh"]
@@ -8,6 +8,7 @@
 [ext_resource type="Shader" path="res://shaders/lightning.gdshader" id="6_qsnl6"]
 [ext_resource type="Shader" path="res://shaders/pixel_dissolve.gdshader" id="7_nyvn0"]
 [ext_resource type="Shader" path="res://shaders/acid.gdshader" id="8_hpsda"]
+[ext_resource type="Texture2D" uid="uid://c6hqdntum417h" path="res://shaders/chrome_pOiM6Hm8Gj.png" id="9_ombdt"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_33jc5"]
 shader = ExtResource("2_nvcqh")
@@ -81,7 +82,9 @@ shader_parameter/uv_alpha_distance_mask = 1.0
 shader = ExtResource("7_nyvn0")
 shader_parameter/progress = 0.5
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_1xxuo"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ie187"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_gipxj"]
 shader = ExtResource("8_hpsda")
 
 [node name="Main" type="Node2D"]
@@ -120,7 +123,13 @@ material = SubResource("ShaderMaterial_v5m2i")
 position = Vector2(590, 70)
 texture = ExtResource("1_qhfb6")
 
+[node name="ChromePOiM6Hm8Gj" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_ie187")
+position = Vector2(956, 535)
+scale = Vector2(1.35352, 1.40155)
+texture = ExtResource("9_ombdt")
+
 [node name="ColorRect" type="ColorRect" parent="."]
-material = SubResource("ShaderMaterial_1xxuo")
-offset_right = 787.0
-offset_bottom = 378.0
+material = SubResource("ShaderMaterial_gipxj")
+offset_right = 1918.0
+offset_bottom = 1075.0

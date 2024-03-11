@@ -94,7 +94,7 @@ float snoise(vec3 v, out vec3 gradient, float time)
 float fbm(vec3 p, inout vec3 gradient) {
 	float value = 0.;
 	float amplitude = 0.2;
-	float frequency = 0.8;
+	float frequency = 2.8;
 	float rotation = 0.01;
 	vec3 grad;
 	for (int i = 0; i < 6; i++) {
