@@ -43,3 +43,7 @@ Here are some of the shaders currently included in this repository:
 ## Contributing
 
 Contributions are welcome! If you have created new shaders or improved existing ones, feel free to open an issue or submit a pull request. Please ensure your contributions follow the existing code style and include appropriate comments for clarity.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
