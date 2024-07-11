@@ -1,3 +1,8 @@
+// This shader is designed for 2D canvas items and operates in an unshaded render mode,
+// meaning it doesn't respond to lighting. The fragment function converts the color of 
+// each pixel to greyscale. It demonstrates both an incorrect and a correct method of 
+// calculating greyscale. The final color is set using the correct method.
+
 shader_type canvas_item;
 render_mode unshaded;
 
