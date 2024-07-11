@@ -8,7 +8,7 @@ This repository contains a collection of 2D shaders created for use with the God
 
 Here are some of the shaders currently included in this repository:
 
-- **REFERENCE.gdshader:** A reference shader to demonstrate basic shader functionality.
+- **REF.gdshader:** A reference shader to demonstrate basic shader functionality.
 - **acid.gdshader:** Creates an acid-like distortion effect.
 - **chroma_offset.gdshader:** Applies a chromatic aberration effect.
 - **distortion1.gdshader:** Adds a distortion effect.
