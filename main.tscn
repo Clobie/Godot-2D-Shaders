@@ -8,7 +8,7 @@
 [ext_resource type="Shader" path="res://shaders/lightning.gdshader" id="6_qsnl6"]
 [ext_resource type="Shader" path="res://shaders/pixel_dissolve.gdshader" id="7_nyvn0"]
 [ext_resource type="Shader" path="res://shaders/acid.gdshader" id="8_hpsda"]
-[ext_resource type="Texture2D" uid="uid://c6hqdntum417h" path="res://shaders/chrome_pOiM6Hm8Gj.png" id="9_ombdt"]
+[ext_resource type="Texture2D" uid="uid://c6hqdntum417h" path="res://assets/chrome_pOiM6Hm8Gj.png" id="9_ombdt"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ie187"]
 
