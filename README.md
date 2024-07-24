@@ -1,6 +1,6 @@
 # Godot 2D Shaders
 
-![til](https://cdn.discordapp.com/attachments/1208997280439599124/1265498938488918046/Godot_v4.2.2-stable_win64_a2frezdB8q.gif?ex=66a1bb3a&is=66a069ba&hm=8c736fb7bbea1a4f8de929cd4b4f6758188bdf2dfee602bee238a998e001510b)
+![Demo Animation](../assets/Godot_v4.2.2-stable_win64_a2frezdB8q.gif?raw=true)
 
 ## Overview
 
