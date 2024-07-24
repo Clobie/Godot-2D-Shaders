@@ -1,5 +1,7 @@
 # Godot 2D Shaders
 
+![til](https://cdn.discordapp.com/attachments/1208997280439599124/1265498938488918046/Godot_v4.2.2-stable_win64_a2frezdB8q.gif?ex=66a1bb3a&is=66a069ba&hm=8c736fb7bbea1a4f8de929cd4b4f6758188bdf2dfee602bee238a998e001510b)
+
 ## Overview
 
 This repository contains a collection of 2D shaders created for use with the Godot Engine. These shaders can be used to enhance the visual effects of 2D games and projects, providing a variety of effects such as color adjustments, distortions, and animations.
