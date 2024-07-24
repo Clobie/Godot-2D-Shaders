@@ -1,6 +1,6 @@
 # Godot 2D Shaders
 
-![Demo Animation](../assets/Godot_v4.2.2-stable_win64_a2frezdB8q.gif?raw=true)
+![Demo Animation](https://github.com/Clobie/Godot-2D-Shaders/blob/main/assets/Godot_v4.2.2-stable_win64_a2frezdB8q.gif?raw=true)
 
 ## Overview
 
